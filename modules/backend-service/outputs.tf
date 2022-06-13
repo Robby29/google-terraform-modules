@@ -28,3 +28,8 @@ output "backend_self_link" {
   description = "Backend self link."
   value       = google_compute_region_backend_service.default.self_link
 }
+
+output "backend_service" {
+  description = "Backend self link."
+  value       = google_compute_region_backend_service.default.self_link
+}

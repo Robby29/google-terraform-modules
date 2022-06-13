@@ -74,3 +74,8 @@ variable "subnetwork" {
   description = "Subnetwork used for the forwarding rule."
   type        = string
 }
+
+variable "backend_service " {
+  description = "Self link for the backend service associated with the ILB"
+  type        = string
+}
