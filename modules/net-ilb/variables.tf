@@ -75,7 +75,7 @@ variable "subnetwork" {
   type        = string
 }
 
-variable "backend_service " {
+variable "backend_service" {
   description = "Self link for the backend service associated with the ILB"
   type        = string
 }
