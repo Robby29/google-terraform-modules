@@ -74,5 +74,5 @@ variable "subnetwork" {
 variable "protocol" {
   description = "The protocol this BackendService uses to communicate with backends."
   type        = string
-  default     = "HTTP"
+  default     = "TCP"
 }
