@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
- output "group_self_link" {
+output "group_self_link" {
   description = "Optional unmanaged instance group self links."
-  value = google_compute_instance_group.unmanaged.self_link
+  value       = google_compute_instance_group.unmanaged.self_link
 }
 
 output "group" {

@@ -45,7 +45,7 @@ resource "google_compute_region_backend_service" "default" {
     for_each = { for b in var.backends : b => b }
     iterator = backend
     content {
-      group          = backend.key
+      group = backend.key
     }
   }
 
@@ -61,7 +61,7 @@ resource "google_compute_health_check" "http" {
   description = "Terraform managed."
 
   http_health_check {
-    port               = try(var.health_check_config.port, null)
+    port = try(var.health_check_config.port, null)
   }
 }
 
@@ -75,7 +75,7 @@ resource "google_compute_health_check" "https" {
   description = "Terraform managed."
 
   https_health_check {
-    port               = try(var.health_check_config.port, null)
+    port = try(var.health_check_config.port, null)
   }
 }
 
@@ -89,7 +89,7 @@ resource "google_compute_health_check" "tcp" {
   description = "Terraform managed."
 
   tcp_health_check {
-    port               = try(var.health_check_config.port, null)
+    port = try(var.health_check_config.port, null)
   }
 
 }
@@ -104,6 +104,6 @@ resource "google_compute_health_check" "ssl" {
   description = "Terraform managed."
 
   ssl_health_check {
-    port               = try(var.health_check_config.port, null)
+    port = try(var.health_check_config.port, null)
   }
 }

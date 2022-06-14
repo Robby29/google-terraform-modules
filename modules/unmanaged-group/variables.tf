@@ -30,21 +30,21 @@ variable "project_id" {
 }
 
 variable "instances" {
-    description = "List of instances which are part of the unmanaged instance group"
-    type = list(string)
-    default = []
+  description = "List of instances which are part of the unmanaged instance group"
+  type        = list(string)
+  default     = []
 }
 
 variable "named_ports" {
-    description = "List of named ports of the unmanaged instance group"
-    type = map(number)
-    default = {}
+  description = "List of named ports of the unmanaged instance group"
+  type        = map(number)
+  default     = {}
 }
 
 variable "zone" {
-    description = "List of instances which are part of the unmanaged instance group"
-    type = string
-    default = null
+  description = "List of instances which are part of the unmanaged instance group"
+  type        = string
+  default     = null
 }
 
 variable "name" {

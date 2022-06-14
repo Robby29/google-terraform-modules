@@ -30,5 +30,5 @@ resource "google_compute_forwarding_rule" "default" {
   all_ports             = var.ports == null ? true : null
   allow_global_access   = var.global_access
   backend_service       = var.backend_service
-  labels = var.labels
+  labels                = var.labels
 }

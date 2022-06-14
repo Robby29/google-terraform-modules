@@ -23,8 +23,8 @@ variable "health_check" {
 variable "health_check_config" {
   description = "Configuration of the auto-created helth check."
   type = object({
-    type    = string      # http https tcp ssl http2
-    port   = string    # actual health check block attributes
+    type = string # http https tcp ssl http2
+    port = string # actual health check block attributes
   })
   default = {
     type = "http"
@@ -34,8 +34,8 @@ variable "health_check_config" {
 
 variable "backends" {
   description = "Load balancer backends, balancing mode is one of 'CONNECTION' or 'UTILIZATION'."
-  type = list(string)
-  default = []
+  type        = list(string)
+  default     = []
 }
 
 
@@ -74,4 +74,5 @@ variable "subnetwork" {
 variable "protocol" {
   description = "The protocol this BackendService uses to communicate with backends."
   type        = string
+  default     = "HTTP"
 }
