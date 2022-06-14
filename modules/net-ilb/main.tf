@@ -29,7 +29,6 @@ resource "google_compute_forwarding_rule" "default" {
   service_label         = var.service_label
   all_ports             = var.ports == null ? true : null
   allow_global_access   = var.global_access
-  backend_service       = google_compute_region_backend_service.default.self_link // this will come as input
-  # is_mirroring_collector = false
+  backend_service       = var.backend_service
   labels = var.labels
 }

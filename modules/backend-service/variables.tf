@@ -70,3 +70,8 @@ variable "subnetwork" {
   description = "Subnetwork used for the forwarding rule."
   type        = string
 }
+
+variable "protocol" {
+  description = "The protocol this BackendService uses to communicate with backends."
+  type        = string
+}
